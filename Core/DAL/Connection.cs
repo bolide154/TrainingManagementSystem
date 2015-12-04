@@ -16,7 +16,7 @@ namespace Core.DAL
         public void connect()
         {
             string server = ".\\SQLEXPRESS";
-            string database = "tsm_db";
+            string database = "tms_db";
             string connStr = "Server=" + server + "; Database=" + database + "; Trusted_Connection=True";
             if (conn == null)
                 conn = new SqlConnection(connStr);

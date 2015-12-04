@@ -19,5 +19,25 @@ namespace GUI
             this.lblId.Text = staffBLL.StaffId.ToString();
             this.lblDisplayName.Text = staffBLL.DisplayName;
         }
+
+        private void mnuiExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void mnuiLogout_Click(object sender, EventArgs e)
+        {
+            StaffBLL staffBLL = new StaffBLL();
+            LoginGUI LoginGUI = new LoginGUI();
+            LoginGUI.Show();
+            this.Hide();
+        }
+
+        private void mnuTrainee_Click(object sender, EventArgs e)
+        {
+            TraineeManagementGUI TraineeManagementGUI = new TraineeManagementGUI();
+            TraineeManagementGUI.Show();
+            this.Hide();
+        }
     }
 }

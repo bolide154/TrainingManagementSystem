@@ -34,11 +34,11 @@ namespace GUI
                 if (staffBLL.Password.Equals(password))
                 {
                     MessageBox.Show("Login success!", "Success");
-                    if (staffBLL.Role == "Admin")
+                    if (staffBLL.Role == "ADMIN")
                     {
 
                     }
-                    else if (staffBLL.Role == "Training")
+                    else if (staffBLL.Role == "STAFF")
                     {
                         TrainingMainGUI trainingMainGUI = new TrainingMainGUI(staffBLL);
                         trainingMainGUI.Show();

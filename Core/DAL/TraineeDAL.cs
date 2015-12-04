@@ -55,5 +55,22 @@ namespace Core.DAL
             }
             return null;
         }
+        public static List<TraineeBLL> search(string key, string value)
+        {
+            string sql = "SELECT * FROM [trainees] WHERE " + key + " LIKE N'%" + value + "%'";
+            DataTable dt = TraineeDAL._conndb.getDataTable(sql);
+            List<TraineeBLL> traineeBLLList = new List<TraineeBLL>();
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow row in dt.Rows)
+                {
+                    TraineeBLL traineeBLL = new TraineeBLL(Int32.Parse(row["traineeid"].ToString()), row["traineename"].ToString(), DateTime.Parse(row["dateofbirth"].ToString()), Int32.Parse(row["toeicscore"].ToString()), row["programlanguage"].ToString(), row["experiencedetails"].ToString(), row["department"].ToString(), row["location"].ToString());
+                    traineeBLLList.Add(traineeBLL);
+
+                }
+                return traineeBLLList;
+            }
+             return null;
+        }
     }
 }

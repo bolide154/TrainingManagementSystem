@@ -14,6 +14,8 @@ namespace GUI
 {
     public partial class TraineeManagementGUI : Form
     {
+        private object staffBLL;
+
         public TraineeManagementGUI()
         {
             InitializeComponent();
@@ -21,7 +23,19 @@ namespace GUI
 
         private void TraineeManagementGUI_Load(object sender, EventArgs e)
         {
+            this.LoadDataToComBoBox();
             this.LoadDataToDataGirdView();
+        }
+        private void LoadDataToComBoBox()
+        {
+            List<string> keyArr = new List<string>();
+            keyArr.Add("");
+            keyArr.Add("Trainee Name");
+            keyArr.Add("Experience DeTails");
+            keyArr.Add("Program Language");
+
+            //Them 1 vai cai nua. khoang 3-4 cai thoi nha. cai nao quan trong ak :)
+            this.cboSearch.DataSource = keyArr;
         }
 
         private void LoadDataToDataGirdView()
@@ -35,6 +49,7 @@ namespace GUI
 
                 this.dgvTraineeManagement.Rows.Add(row.TraineeId, row.TraineeName, row.DateOfBirth.ToShortDateString(), row.ToeicScore, row.ProgramLanguage, row.ExperienceDetails, row.Department, row.Location);
             }
+            
         }
 
         private void dgvTraineeManagement_CurrentCellChanged(object sender, EventArgs e)
@@ -200,6 +215,55 @@ namespace GUI
                 }
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string key = this.txtsearch.Text;
+            
+            if (key == "".Trim())
+            {
+                MessageBox.Show("Please enter keyword!", "Notice");
+                return;
+            }
+           if(this.cboSearch.SelectedItem.ToString()=="")
+            {
+                MessageBox.Show("Please choose keyword!", "Notice");
+                return;
+            }
+            string catalog = "";
+            if (this.cboSearch.SelectedItem.ToString() == "Trainee Name") // xem lại cái Name 
+            {
+                catalog = "traineename";
+            }
+            if (this.cboSearch.SelectedItem.ToString()=="Experience DeTails") // xem lại cái Name 
+            {
+                catalog = "experiencedetails";
+            }
+            if (this.cboSearch.SelectedItem.ToString() == "Program Language") // xem lại cái Name 
+            {
+                catalog = "programlanguage";
+            }
+            TraineeBLL traineeBLL = new TraineeBLL();
+            List<TraineeBLL> traineeList = new List<TraineeBLL>(); //booktausArr
+            traineeList = TraineeDAL.search(catalog, key);
+            this.dgvTraineeManagement.Rows.Clear();
+            if (traineeList != null)
+            {
+                foreach (TraineeBLL row in traineeList)
+                {
+                    this.dgvTraineeManagement.Rows.Add(row.TraineeId, row.TraineeName, row.DateOfBirth, row.ToeicScore, row.ProgramLanguage, row.ExperienceDetails, row.Department, row.Location);
+                }
+
+            }
+            
+        }
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {   
+            this.Hide();
+        }
+       
+
     }
 
 

@@ -175,5 +175,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblDisplayName;
+
+        public TrainingMainGUI()
+        {
+        }
     }
 }

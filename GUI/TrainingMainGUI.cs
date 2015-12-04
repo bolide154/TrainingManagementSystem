@@ -37,7 +37,7 @@ namespace GUI
         {
             TraineeManagementGUI TraineeManagementGUI = new TraineeManagementGUI();
             TraineeManagementGUI.Show();
-            this.Hide();
+            
         }
     }
 }

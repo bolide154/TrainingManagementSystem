@@ -63,26 +63,30 @@
             // 
             // cboSearch
             // 
+            this.cboSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSearch.FormattingEnabled = true;
-            this.cboSearch.Location = new System.Drawing.Point(26, 34);
+            this.cboSearch.Items.AddRange(new object[] {
+            "Trainee Name"});
+            this.cboSearch.Location = new System.Drawing.Point(12, 36);
             this.cboSearch.Name = "cboSearch";
-            this.cboSearch.Size = new System.Drawing.Size(208, 21);
+            this.cboSearch.Size = new System.Drawing.Size(158, 21);
             this.cboSearch.TabIndex = 0;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(484, 32);
+            this.btnSearch.Location = new System.Drawing.Point(470, 34);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtsearch
             // 
-            this.txtsearch.Location = new System.Drawing.Point(256, 34);
+            this.txtsearch.Location = new System.Drawing.Point(176, 36);
             this.txtsearch.Name = "txtsearch";
-            this.txtsearch.Size = new System.Drawing.Size(219, 20);
+            this.txtsearch.Size = new System.Drawing.Size(285, 20);
             this.txtsearch.TabIndex = 2;
             // 
             // dgvTraineeManagement
@@ -97,7 +101,7 @@
             this.clmnExperienceDetails,
             this.clmnDepartment,
             this.clmnLocation});
-            this.dgvTraineeManagement.Location = new System.Drawing.Point(26, 77);
+            this.dgvTraineeManagement.Location = new System.Drawing.Point(12, 79);
             this.dgvTraineeManagement.Name = "dgvTraineeManagement";
             this.dgvTraineeManagement.Size = new System.Drawing.Size(533, 250);
             this.dgvTraineeManagement.TabIndex = 3;
@@ -146,7 +150,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 351);
+            this.label1.Location = new System.Drawing.Point(9, 353);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 4;
@@ -155,7 +159,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(318, 351);
+            this.label2.Location = new System.Drawing.Point(304, 353);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 5;
@@ -164,7 +168,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 458);
+            this.label3.Location = new System.Drawing.Point(12, 460);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 13);
             this.label3.TabIndex = 6;
@@ -173,7 +177,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(318, 406);
+            this.label4.Location = new System.Drawing.Point(304, 408);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(148, 13);
             this.label4.TabIndex = 7;
@@ -182,7 +186,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 517);
+            this.label5.Location = new System.Drawing.Point(12, 519);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 8;
@@ -191,7 +195,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 406);
+            this.label6.Location = new System.Drawing.Point(12, 408);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 13);
             this.label6.TabIndex = 9;
@@ -200,7 +204,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(318, 458);
+            this.label7.Location = new System.Drawing.Point(304, 460);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 13);
             this.label7.TabIndex = 10;
@@ -208,35 +212,35 @@
             // 
             // txtname
             // 
-            this.txtname.Location = new System.Drawing.Point(26, 370);
+            this.txtname.Location = new System.Drawing.Point(12, 372);
             this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(208, 20);
+            this.txtname.Size = new System.Drawing.Size(240, 20);
             this.txtname.TabIndex = 11;
             // 
             // txttoeic
             // 
-            this.txttoeic.Location = new System.Drawing.Point(26, 474);
+            this.txttoeic.Location = new System.Drawing.Point(12, 476);
             this.txttoeic.Name = "txttoeic";
-            this.txttoeic.Size = new System.Drawing.Size(208, 20);
+            this.txttoeic.Size = new System.Drawing.Size(240, 20);
             this.txttoeic.TabIndex = 12;
             // 
             // txtdepartment
             // 
-            this.txtdepartment.Location = new System.Drawing.Point(26, 533);
+            this.txtdepartment.Location = new System.Drawing.Point(12, 535);
             this.txtdepartment.Name = "txtdepartment";
-            this.txtdepartment.Size = new System.Drawing.Size(208, 20);
+            this.txtdepartment.Size = new System.Drawing.Size(240, 20);
             this.txtdepartment.TabIndex = 13;
             // 
             // txtlocation
             // 
-            this.txtlocation.Location = new System.Drawing.Point(26, 423);
+            this.txtlocation.Location = new System.Drawing.Point(12, 425);
             this.txtlocation.Name = "txtlocation";
-            this.txtlocation.Size = new System.Drawing.Size(208, 20);
+            this.txtlocation.Size = new System.Drawing.Size(240, 20);
             this.txtlocation.TabIndex = 14;
             // 
             // txtdetails
             // 
-            this.txtdetails.Location = new System.Drawing.Point(321, 474);
+            this.txtdetails.Location = new System.Drawing.Point(307, 476);
             this.txtdetails.Multiline = true;
             this.txtdetails.Name = "txtdetails";
             this.txtdetails.Size = new System.Drawing.Size(238, 79);
@@ -245,14 +249,14 @@
             // dtpdateofbirth
             // 
             this.dtpdateofbirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpdateofbirth.Location = new System.Drawing.Point(321, 367);
+            this.dtpdateofbirth.Location = new System.Drawing.Point(307, 369);
             this.dtpdateofbirth.Name = "dtpdateofbirth";
             this.dtpdateofbirth.Size = new System.Drawing.Size(238, 20);
             this.dtpdateofbirth.TabIndex = 16;
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(166, 581);
+            this.btnadd.Location = new System.Drawing.Point(152, 583);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(93, 23);
             this.btnadd.TabIndex = 18;
@@ -262,7 +266,7 @@
             // 
             // btndetele
             // 
-            this.btndetele.Location = new System.Drawing.Point(265, 581);
+            this.btndetele.Location = new System.Drawing.Point(251, 583);
             this.btndetele.Name = "btndetele";
             this.btndetele.Size = new System.Drawing.Size(91, 23);
             this.btndetele.TabIndex = 19;
@@ -272,7 +276,7 @@
             // 
             // btnsave
             // 
-            this.btnsave.Location = new System.Drawing.Point(362, 581);
+            this.btnsave.Location = new System.Drawing.Point(348, 583);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(98, 23);
             this.btnsave.TabIndex = 20;
@@ -282,16 +286,17 @@
             // 
             // btnclose
             // 
-            this.btnclose.Location = new System.Drawing.Point(466, 581);
+            this.btnclose.Location = new System.Drawing.Point(452, 583);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(93, 23);
             this.btnclose.TabIndex = 21;
             this.btnclose.Text = "Close";
             this.btnclose.UseVisualStyleBackColor = true;
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
             // txtlanguage
             // 
-            this.txtlanguage.Location = new System.Drawing.Point(321, 423);
+            this.txtlanguage.Location = new System.Drawing.Point(307, 425);
             this.txtlanguage.Name = "txtlanguage";
             this.txtlanguage.Size = new System.Drawing.Size(238, 20);
             this.txtlanguage.TabIndex = 22;
@@ -300,7 +305,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 616);
+            this.ClientSize = new System.Drawing.Size(552, 616);
             this.Controls.Add(this.txtlanguage);
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.btnsave);

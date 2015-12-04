@@ -16,6 +16,7 @@ namespace Core.BLL
         private string _experienceDetails;
         private string _department;
         private string _location;
+       
 
         public int TraineeId
         {
@@ -73,6 +74,7 @@ namespace Core.BLL
         public TraineeBLL()
         {
         }
+       
         
     }
 }

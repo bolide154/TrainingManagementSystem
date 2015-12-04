@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class StaffGUI : Form
+    public partial class LoginGUI : Form
     {
-        public StaffGUI()
+        public LoginGUI()
         {
             InitializeComponent();
         }
@@ -34,6 +34,20 @@ namespace GUI
                 if (staffBLL.Password.Equals(password))
                 {
                     MessageBox.Show("Login success!", "Success");
+                    if (staffBLL.Role == "Admin")
+                    {
+
+                    }
+                    else if (staffBLL.Role == "Training")
+                    {
+                        TrainingMainGUI trainingMainGUI = new TrainingMainGUI(staffBLL);
+                        trainingMainGUI.Show();
+                        this.Hide();
+                    }
+                    else if (staffBLL.Role == "Trainee")
+                    {
+
+                    }
                 }
                 else
                 {

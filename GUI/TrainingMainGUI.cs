@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,13 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class TrainingMain : Form
+    public partial class TrainingMainGUI : Form
     {
-        public TrainingMain()
+        public TrainingMainGUI(StaffBLL staffBLL)
         {
             InitializeComponent();
+            this.lblId.Text = staffBLL.StaffId.ToString();
+            this.lblDisplayName.Text = staffBLL.DisplayName;
         }
     }
 }

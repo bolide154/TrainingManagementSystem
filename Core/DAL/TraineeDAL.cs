@@ -32,5 +32,28 @@ namespace Core.DAL
             String sql = "INSERT INTO [trainees] (traineename,dateofbirth,toeicscore,programlanguage,experiencedetails,department,location) VALUES ( N'" + traineeBLL.TraineeName + "', '" + traineeBLL.DateOfBirth + "',"+ traineeBLL.ToeicScore+",N'"+traineeBLL.ProgramLanguage+"',N'"+traineeBLL.ExperienceDetails+"',N'"+traineeBLL.Department+"',N'"+traineeBLL.Location+"')";
             TraineeDAL._conndb.ExecuteNonQuery(sql);
         }
+        public static void saveTrainee(TraineeBLL traineeBLL)
+        {
+            string sql= "UPDATE [trainees] SET traineename= N'" + traineeBLL.TraineeName + "',dateofbirth= '" + traineeBLL.DateOfBirth + "',toeicscore=" + traineeBLL.ToeicScore + ",programlanguage = N'" + traineeBLL.ProgramLanguage + "',experiencedetails=N'" + traineeBLL.ExperienceDetails + "',department=N'" + traineeBLL.Department + "',location=N'" + traineeBLL.Location + "' Where traineeid =" + traineeBLL.TraineeId ;
+            TraineeDAL._conndb.ExecuteNonQuery(sql);
+        }
+        public static void deteleTrainee(TraineeBLL traineeBLL)
+        {
+            string sql = "DELETE FROM [trainees] where traineeid =" + traineeBLL.TraineeId;
+            TraineeDAL._conndb.ExecuteNonQuery(sql);
+        }
+
+        public static TraineeBLL getTraineeItem(TraineeBLL traineeBLL)
+        {
+            string sql= "SELECT * FROM where traineeid =" + traineeBLL.TraineeId;
+            DataTable dt = new DataTable();
+            dt = TraineeDAL._conndb.getDataTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                DataRow row = dt.Rows[0];
+                return new TraineeBLL(Int32.Parse(row["traineeid"].ToString()), row["traineename"].ToString(), DateTime.Parse(row["dateofbirth"].ToString()), Int32.Parse(row["toeicscore"].ToString()), row["programlanguage"].ToString(), row["experiencedetails"].ToString(), row["department"].ToString(), row["location"].ToString());
+            }
+            return null;
+        }
     }
 }

@@ -73,5 +73,6 @@ namespace Core.BLL
         public TraineeBLL()
         {
         }
+        
     }
 }

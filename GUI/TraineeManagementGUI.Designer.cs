@@ -97,7 +97,7 @@
             this.clmnExperienceDetails,
             this.clmnDepartment,
             this.clmnLocation});
-            this.dgvTraineeManagement.Location = new System.Drawing.Point(26, 76);
+            this.dgvTraineeManagement.Location = new System.Drawing.Point(26, 77);
             this.dgvTraineeManagement.Name = "dgvTraineeManagement";
             this.dgvTraineeManagement.Size = new System.Drawing.Size(533, 250);
             this.dgvTraineeManagement.TabIndex = 3;
@@ -252,9 +252,9 @@
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(29, 581);
+            this.btnadd.Location = new System.Drawing.Point(166, 581);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(75, 23);
+            this.btnadd.Size = new System.Drawing.Size(93, 23);
             this.btnadd.TabIndex = 18;
             this.btnadd.Text = "Add";
             this.btnadd.UseVisualStyleBackColor = true;
@@ -262,27 +262,29 @@
             // 
             // btndetele
             // 
-            this.btndetele.Location = new System.Drawing.Point(159, 581);
+            this.btndetele.Location = new System.Drawing.Point(265, 581);
             this.btndetele.Name = "btndetele";
-            this.btndetele.Size = new System.Drawing.Size(75, 23);
+            this.btndetele.Size = new System.Drawing.Size(91, 23);
             this.btndetele.TabIndex = 19;
             this.btndetele.Text = "Detele";
             this.btndetele.UseVisualStyleBackColor = true;
+            this.btndetele.Click += new System.EventHandler(this.btndetele_Click);
             // 
             // btnsave
             // 
-            this.btnsave.Location = new System.Drawing.Point(321, 581);
+            this.btnsave.Location = new System.Drawing.Point(362, 581);
             this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(75, 23);
+            this.btnsave.Size = new System.Drawing.Size(98, 23);
             this.btnsave.TabIndex = 20;
             this.btnsave.Text = "Save";
             this.btnsave.UseVisualStyleBackColor = true;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
             // btnclose
             // 
-            this.btnclose.Location = new System.Drawing.Point(484, 581);
+            this.btnclose.Location = new System.Drawing.Point(466, 581);
             this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(75, 23);
+            this.btnclose.Size = new System.Drawing.Size(93, 23);
             this.btnclose.TabIndex = 21;
             this.btnclose.Text = "Close";
             this.btnclose.UseVisualStyleBackColor = true;

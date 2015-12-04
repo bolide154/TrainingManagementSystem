@@ -39,9 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CourseToTraineeBLL.cs" />
     <Compile Include="BLL\StaffBLL.cs" />
     <Compile Include="BLL\TraineeBLL.cs" />
     <Compile Include="DAL\Connection.cs" />
+    <Compile Include="DAL\CourseToTraineeDAL.cs" />
     <Compile Include="DAL\StaffDAL.cs" />
     <Compile Include="DAL\TraineeDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

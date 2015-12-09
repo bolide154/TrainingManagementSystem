@@ -105,7 +105,6 @@
             this.dgvTraineeManagement.Name = "dgvTraineeManagement";
             this.dgvTraineeManagement.Size = new System.Drawing.Size(533, 250);
             this.dgvTraineeManagement.TabIndex = 3;
-            this.dgvTraineeManagement.CurrentCellChanged += new System.EventHandler(this.dgvTraineeManagement_CurrentCellChanged);
             // 
             // clmnTraineeId
             // 

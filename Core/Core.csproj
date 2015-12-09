@@ -39,10 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CategoriesBLL.cs" />
+    <Compile Include="BLL\CourseBLL.cs" />
     <Compile Include="BLL\CourseToTraineeBLL.cs" />
     <Compile Include="BLL\StaffBLL.cs" />
     <Compile Include="BLL\TraineeBLL.cs" />
+    <Compile Include="DAL\CategoriesDAL.cs" />
     <Compile Include="DAL\Connection.cs" />
+    <Compile Include="DAL\CourseDAL.cs" />
     <Compile Include="DAL\CourseToTraineeDAL.cs" />
     <Compile Include="DAL\StaffDAL.cs" />
     <Compile Include="DAL\TraineeDAL.cs" />

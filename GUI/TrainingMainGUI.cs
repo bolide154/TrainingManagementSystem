@@ -35,9 +35,23 @@ namespace GUI
 
         private void mnuTrainee_Click(object sender, EventArgs e)
         {
+           
             TraineeManagementGUI TraineeManagementGUI = new TraineeManagementGUI();
             TraineeManagementGUI.Show();
             
+            
+        }
+
+        private void mnuCategory_Click(object sender, EventArgs e)
+        {
+            CategoriesGUI CategoriesGUI = new CategoriesGUI();
+            CategoriesGUI.Show();
+        }
+
+        private void mnuCourse_Click(object sender, EventArgs e)
+        {
+            CoursesGUI CoursesGUI = new CoursesGUI();
+            CoursesGUI.Show();
         }
     }
 }

@@ -24,5 +24,17 @@ namespace Core.DAL
             }
             return null;
         }
+        public static CourseToTraineeBLL getCourseOfTrainee1(int courseId)
+        {
+            string sql = "SELECT * FROM [course_trainee] WHERE courseid=" + courseId;
+            DataTable dt = new DataTable();
+            dt = CourseDAL._conndb.getDataTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                DataRow row = dt.Rows[0];
+                return new CourseToTraineeBLL(Int32.Parse(row["traineeid"].ToString()), Int32.Parse(row["courseid"].ToString()));
+            }
+            return null;
+        }
     }
 }

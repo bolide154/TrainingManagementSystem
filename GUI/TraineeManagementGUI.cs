@@ -12,9 +12,7 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class TraineeManagementGUI : Form
-    {
-        private object staffBLL;
+    public partial class TraineeManagementGUI : Form { 
 
         public TraineeManagementGUI()
         {
@@ -49,12 +47,19 @@ namespace GUI
 
                 this.dgvTraineeManagement.Rows.Add(row.TraineeId, row.TraineeName, row.DateOfBirth.ToShortDateString(), row.ToeicScore, row.ProgramLanguage, row.ExperienceDetails, row.Department, row.Location);
             }
-            
+            this.getSelectedValue();
+            this.dgvTraineeManagement.SelectionChanged += new EventHandler(dgvTraineeManagement_SelectionChanged);
+
         }
 
-        private void dgvTraineeManagement_CurrentCellChanged(object sender, EventArgs e)
+        private void dgvTraineeManagement_SelectionChanged(object sender, EventArgs e)
         {
-            if(this.dgvTraineeManagement.SelectedCells.Count>0 && this.dgvTraineeManagement.CurrentRow.Index<this.dgvTraineeManagement.Rows.Count-1)
+            this.getSelectedValue();
+        }
+
+        private void getSelectedValue()
+        {
+            if (this.dgvTraineeManagement.SelectedCells.Count > 0 && this.dgvTraineeManagement.CurrentRow.Index < this.dgvTraineeManagement.Rows.Count - 1)
             {
                 txtname.Text = dgvTraineeManagement.CurrentRow.Cells[1].Value.ToString();
                 dtpdateofbirth.Text = dgvTraineeManagement.CurrentRow.Cells[2].Value.ToString();
@@ -68,13 +73,12 @@ namespace GUI
             {
                 txtname.Text = "";
                 dtpdateofbirth.Text = "";
-                txttoeic.Text ="0" ;
+                txttoeic.Text = "0";
                 txtlanguage.Text = "";
                 txtdetails.Text = "";
                 txtdepartment.Text = "";
                 txtlocation.Text = "";
             }
-
         }
 
         private void btnadd_Click(object sender, EventArgs e)
@@ -259,7 +263,8 @@ namespace GUI
         }
 
         private void btnclose_Click(object sender, EventArgs e)
-        {   
+        {
+            
             this.Hide();
         }
        

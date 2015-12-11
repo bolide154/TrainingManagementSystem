@@ -58,6 +58,7 @@
             this.btnsave = new System.Windows.Forms.Button();
             this.btnclose = new System.Windows.Forms.Button();
             this.txtlanguage = new System.Windows.Forms.TextBox();
+            this.btnAssignTrainee = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTraineeManagement)).BeginInit();
             this.SuspendLayout();
             // 
@@ -300,11 +301,22 @@
             this.txtlanguage.Size = new System.Drawing.Size(238, 20);
             this.txtlanguage.TabIndex = 22;
             // 
+            // btnAssignTrainee
+            // 
+            this.btnAssignTrainee.Location = new System.Drawing.Point(49, 583);
+            this.btnAssignTrainee.Name = "btnAssignTrainee";
+            this.btnAssignTrainee.Size = new System.Drawing.Size(97, 23);
+            this.btnAssignTrainee.TabIndex = 23;
+            this.btnAssignTrainee.Text = "Assign Trainee";
+            this.btnAssignTrainee.UseVisualStyleBackColor = true;
+            this.btnAssignTrainee.Click += new System.EventHandler(this.btnAssignTrainee_Click);
+            // 
             // TraineeManagementGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 616);
+            this.Controls.Add(this.btnAssignTrainee);
             this.Controls.Add(this.txtlanguage);
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.btnsave);
@@ -368,5 +380,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmnDepartment;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmnLocation;
         private System.Windows.Forms.TextBox txtlanguage;
+        private System.Windows.Forms.Button btnAssignTrainee;
     }
 }

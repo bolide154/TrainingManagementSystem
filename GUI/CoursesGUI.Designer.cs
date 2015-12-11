@@ -47,16 +47,15 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnAssignTrainee = new System.Windows.Forms.Button();
             this.btnAddtopic = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCourse)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(404, 23);
+            this.btnSearch.Location = new System.Drawing.Point(502, 22);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(91, 23);
+            this.btnSearch.Size = new System.Drawing.Size(105, 23);
             this.btnSearch.TabIndex = 0;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -68,14 +67,14 @@
             this.cboSearch.FormattingEnabled = true;
             this.cboSearch.Location = new System.Drawing.Point(35, 24);
             this.cboSearch.Name = "cboSearch";
-            this.cboSearch.Size = new System.Drawing.Size(148, 21);
+            this.cboSearch.Size = new System.Drawing.Size(187, 21);
             this.cboSearch.TabIndex = 1;
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(211, 25);
+            this.txtSearch.Location = new System.Drawing.Point(251, 25);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(167, 20);
+            this.txtSearch.Size = new System.Drawing.Size(226, 20);
             this.txtSearch.TabIndex = 2;
             // 
             // dgvCourse
@@ -89,7 +88,7 @@
             this.ClmnCourseDescription});
             this.dgvCourse.Location = new System.Drawing.Point(35, 51);
             this.dgvCourse.Name = "dgvCourse";
-            this.dgvCourse.Size = new System.Drawing.Size(460, 150);
+            this.dgvCourse.Size = new System.Drawing.Size(572, 150);
             this.dgvCourse.TabIndex = 3;
             // 
             // clmnCategoryId
@@ -128,7 +127,7 @@
             this.cbocategoryname.FormattingEnabled = true;
             this.cbocategoryname.Location = new System.Drawing.Point(32, 235);
             this.cbocategoryname.Name = "cbocategoryname";
-            this.cbocategoryname.Size = new System.Drawing.Size(463, 21);
+            this.cbocategoryname.Size = new System.Drawing.Size(575, 21);
             this.cbocategoryname.TabIndex = 4;
             // 
             // label1
@@ -153,7 +152,7 @@
             // 
             this.txtcoursename.Location = new System.Drawing.Point(32, 288);
             this.txtcoursename.Name = "txtcoursename";
-            this.txtcoursename.Size = new System.Drawing.Size(463, 20);
+            this.txtcoursename.Size = new System.Drawing.Size(575, 20);
             this.txtcoursename.TabIndex = 7;
             // 
             // txtDescription
@@ -161,7 +160,7 @@
             this.txtDescription.Location = new System.Drawing.Point(35, 336);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(460, 79);
+            this.txtDescription.Size = new System.Drawing.Size(572, 79);
             this.txtDescription.TabIndex = 8;
             // 
             // label3
@@ -213,31 +212,22 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnAssignTrainee
-            // 
-            this.btnAssignTrainee.Location = new System.Drawing.Point(101, 450);
-            this.btnAssignTrainee.Name = "btnAssignTrainee";
-            this.btnAssignTrainee.Size = new System.Drawing.Size(105, 23);
-            this.btnAssignTrainee.TabIndex = 14;
-            this.btnAssignTrainee.Text = "Assign Trainee";
-            this.btnAssignTrainee.UseVisualStyleBackColor = true;
-            // 
             // btnAddtopic
             // 
-            this.btnAddtopic.Location = new System.Drawing.Point(222, 450);
+            this.btnAddtopic.Location = new System.Drawing.Point(502, 421);
             this.btnAddtopic.Name = "btnAddtopic";
             this.btnAddtopic.Size = new System.Drawing.Size(105, 23);
             this.btnAddtopic.TabIndex = 15;
             this.btnAddtopic.Text = "Add Topic";
             this.btnAddtopic.UseVisualStyleBackColor = true;
+            this.btnAddtopic.Click += new System.EventHandler(this.btnAddtopic_Click);
             // 
             // CoursesGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 488);
+            this.ClientSize = new System.Drawing.Size(619, 488);
             this.Controls.Add(this.btnAddtopic);
-            this.Controls.Add(this.btnAssignTrainee);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnDelete);
@@ -277,7 +267,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnAssignTrainee;
         private System.Windows.Forms.Button btnAddtopic;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmnCategoryId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClmnCourseId;

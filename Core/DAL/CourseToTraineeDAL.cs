@@ -36,5 +36,27 @@ namespace Core.DAL
             }
             return null;
         }
+        public static List<CourseToTraineeBLL> getCourseToTraineeList(TraineeBLL trainerBLL)
+        {
+            
+        string sql = "SELECT * FROM [course_trainee] WHERE traineeid=" + trainerBLL.TraineeId;
+            DataTable dt = new DataTable();
+            dt = CourseToTraineeDAL._conndb.getDataTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                List<CourseToTraineeBLL> coursestotraineeList = new List<CourseToTraineeBLL>();
+                foreach (DataRow row in dt.Rows)
+                {
+                    coursestotraineeList.Add(new CourseToTraineeBLL(Int32.Parse(row["traineeid"].ToString()), Int32.Parse(row["courseid"].ToString())));
+                }
+                return coursestotraineeList;
+            }
+            return null;
+        }
+        public static void addCourseToTrainee(CourseToTraineeBLL coursetotraineeBLL)
+        {
+            String sql = "INSERT INTO [course_trainee] (traineeid,courseid) VALUES (" + coursetotraineeBLL.TraineeId + ", " + coursetotraineeBLL.CourseId + ")";
+            CourseToTraineeDAL._conndb.ExecuteNonQuery(sql);
+        }
     }
 }

@@ -27,6 +27,20 @@ namespace Core.DAL
             }
             return null; 
         }
+        //
+        public static TraineeBLL getTraineeById(int traineeId)
+        {
+            string sql = "SELECT * FROM [trainees] where traineeid=" + traineeId;
+            DataTable dt = new DataTable();
+            dt = TraineeDAL._conndb.getDataTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                DataRow row = dt.Rows[0];
+                return new TraineeBLL(Int32.Parse(row["traineeid"].ToString()), row["traineename"].ToString(), DateTime.Parse(row["dateofbirth"].ToString()), Int32.Parse(row["toeicscore"].ToString()), row["programlanguage"].ToString(), row["experiencedetails"].ToString(), row["department"].ToString(), row["location"].ToString());
+            }
+            return null;
+        }
+        //
         public static void addTrainee(TraineeBLL traineeBLL)
         {
             String sql = "INSERT INTO [trainees] (traineename,dateofbirth,toeicscore,programlanguage,experiencedetails,department,location) VALUES ( N'" + traineeBLL.TraineeName + "', '" + traineeBLL.DateOfBirth + "',"+ traineeBLL.ToeicScore+",N'"+traineeBLL.ProgramLanguage+"',N'"+traineeBLL.ExperienceDetails+"',N'"+traineeBLL.Department+"',N'"+traineeBLL.Location+"')";

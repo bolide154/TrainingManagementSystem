@@ -44,9 +44,11 @@ namespace GUI
                         trainingMainGUI.Show();
                         this.Hide();
                     }
-                    else if (staffBLL.Role == "Trainee")
+                    else if (staffBLL.Role == "TRAINER")
                     {
-
+                        TrainerMainGUI trainermainGUI = new TrainerMainGUI(staffBLL);
+                        trainermainGUI.Show();
+                        this.Hide();
                     }
                 }
                 else

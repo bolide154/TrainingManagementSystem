@@ -215,5 +215,11 @@ namespace GUI
             }
 
         }
+
+        private void btnAddtopic_Click(object sender, EventArgs e)
+        {
+            TopicGUI topicGUI = new TopicGUI();
+            topicGUI.Show();
+        }
     }
 }

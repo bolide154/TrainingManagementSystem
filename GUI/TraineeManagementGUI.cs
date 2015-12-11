@@ -78,6 +78,9 @@ namespace GUI
                 txtdetails.Text = "";
                 txtdepartment.Text = "";
                 txtlocation.Text = "";
+                btnAssignTrainee.Enabled = false;
+                btnsave.Enabled = false;
+                btndetele.Enabled = false;
             }
         }
 
@@ -267,8 +270,22 @@ namespace GUI
             
             this.Hide();
         }
-       
 
+        private void btnAssignTrainee_Click(object sender, EventArgs e)
+        {
+            
+            int traineeId = Convert.ToInt32(dgvTraineeManagement.CurrentRow.Cells[0].Value.ToString());
+            string name = dgvTraineeManagement.CurrentRow.Cells[1].Value.ToString();
+            DateTime dateOfBirth = Convert.ToDateTime(dgvTraineeManagement.CurrentRow.Cells[2].Value.ToString());
+            int toeicScore = Convert.ToInt32(dgvTraineeManagement.CurrentRow.Cells[3].Value.ToString());
+            string language = dgvTraineeManagement.CurrentRow.Cells[4].Value.ToString();
+            string detail = dgvTraineeManagement.CurrentRow.Cells[5].Value.ToString();
+            string department = dgvTraineeManagement.CurrentRow.Cells[6].Value.ToString();
+            string location = dgvTraineeManagement.CurrentRow.Cells[7].Value.ToString();
+            TraineeBLL trainerBLL = new TraineeBLL(traineeId, name, dateOfBirth, toeicScore, language, detail, department, location);
+            CourseToTraineeGUI courseToTraineeGUI = new CourseToTraineeGUI(trainerBLL);            
+            courseToTraineeGUI.Show();
+        }
     }
 
 

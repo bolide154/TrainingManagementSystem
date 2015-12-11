@@ -27,5 +27,6 @@ namespace Core.BLL
             _traineeId = TraineeId;
             _courseId = CourseId;
         }
+        public CourseToTraineeBLL() { }
     }
 }

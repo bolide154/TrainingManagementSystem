@@ -23,6 +23,20 @@ namespace Core.DAL
             }
             return null;
         }
+        //
+        public static CourseBLL getCourseById(int courseId)
+        {
+            string sql = "SELECT * FROM [courses] where courseid=" + courseId;
+            DataTable dt = new DataTable();
+            dt = CourseDAL._conndb.getDataTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                DataRow row = dt.Rows[0];
+                return new CourseBLL(Int32.Parse(row["categoryid"].ToString()), Int32.Parse(row["courseid"].ToString()), row["coursename"].ToString(), row["coursedescription"].ToString());
+            }
+            return null;
+        }
+        //
 
         public static List<CourseBLL> getCourseList()
         {
